@@ -19,19 +19,7 @@ Route::get('/', function () {
 
 Route::get('/addStudent', [StudentController::class, 'addStudent']);
 Route::post('/addStudent', [StudentController::class, 'storeStudent'])->name('student.store');
-
-
 Route::get('/allStudent', [StudentController::class, 'allStudent']);
-
-
 Route::get('/editStudent/{id}', [StudentController::class, 'editStudent']);
-
-
-
-
-
-
-
 Route::post('/update', [StudentController::class, 'update'])->name('student.update');
-
 Route::get('/delete/{id}', [StudentController::class, 'delete'])->name('student.delete');
