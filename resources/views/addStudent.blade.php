@@ -30,7 +30,10 @@
        @csrf
        <div class="form-group">
          <label>Name</label>
-         <input type="text" name="name" class="form-control" />
+         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" />
+         @error('name')
+          <strong class="text-danger">{{ $message }}</strong>
+         @enderror
        </div>
        <div class="form-group">
          <label>Chose Profile Image</label>
